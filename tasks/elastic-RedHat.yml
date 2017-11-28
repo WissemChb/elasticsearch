@@ -1,0 +1,18 @@
+
+#Installing logstash
+- name: "Installing elasticsearch"
+  yum:
+    name: "{{ elastic_repo_redhat }}"
+    state: latest
+
+- name: "Enable elasticsearch"
+  systemd:
+    name: elasticsearch.service
+    enabled: yes
+
+- name: "Start elasticsearch"
+  systemd:
+    name: elasticsearch.service
+    state: started
+   
+    

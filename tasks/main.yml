@@ -1,0 +1,16 @@
+---
+# tasks file for elasticsearch
+#Installing Java
+- name: "Installing Java"
+  include_role:
+    name: java
+
+#Installing elasticsearch in Debian systems
+- name: "Installing ELasticsearch in Debian systems"
+  include: elastic-{{ debian_system }}.yml
+  when: ansible_os_family == 'Debian'
+
+#Installing elasticsearch in RedHat systems
+- name: "Installing ELasticsearch in RedHat systems"
+  include: elastic-{{ redhat_system }}.yml
+  when: ansible_os_family == 'RedHat'

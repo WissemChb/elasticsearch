@@ -1,0 +1,15 @@
+
+- name: "Installing elasticsearch"
+  apt:
+    name: "{{ elastic_repo_debian }}"
+    state: latest
+
+- name: "Enable elasticsearch"
+  service:
+    name: elasticsearch.service
+    enabled: yes
+
+- name: "Start elasticsearch"
+  service:
+    name: elasticsearch
+    state: started
