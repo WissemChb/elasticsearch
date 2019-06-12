@@ -1,5 +1,19 @@
+- name: "Update the system"
+  yum:
+    name: '*'
+    state: latest
+  become: yes
 
-#Installing logstash
+- name : "Install prerequisite"
+  yum:
+    name: {{item}}
+    state: latest
+  become: yes
+  with_items:
+    - java-1.8.0-openjdk
+    - java-1.8.0-openjdk-devel
+
+
 - name: "Installing elasticsearch"
   yum:
     name: "{{ elastic_repo_redhat }}"

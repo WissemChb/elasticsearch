@@ -1,9 +1,5 @@
 ---
 # tasks file for elasticsearch
-#Installing Java
-- name: "Installing Java"
-  include_role:
-    name: java
 
 #Installing elasticsearch in Debian systems
 - name: "Installing ELasticsearch in Debian systems"
