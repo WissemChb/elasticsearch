@@ -1,4 +1,4 @@
 ---
-# defaults file for elasticsearch
+# defaults files for elasticsearch
 elastic_repo_redhat: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.0.0.rpm"
 elastic_repo_debian: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.0.0.deb"

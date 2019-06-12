@@ -18,15 +18,24 @@
   yum:
     name: "{{ elastic_repo_redhat }}"
     state: latest
+  become: yes
+
+- name: "Copy config file"
+  copy:
+    src: "../files/elasticsearch.yaml"
+    dest: "/etc/elasticsearch/elasticsearch.yaml"
+  become: yes
 
 - name: "Enable elasticsearch"
   systemd:
     name: elasticsearch.service
     enabled: yes
+  become: yes
 
 - name: "Start elasticsearch"
   systemd:
     name: elasticsearch.service
     state: started
+  become: yes
    
     

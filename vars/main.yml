@@ -1,4 +1,4 @@
 ---
-# vars file for elasticsearch
+# vars files for elasticsearch
 redhat_system: "RedHat"
 debian_system:  "Debian"
