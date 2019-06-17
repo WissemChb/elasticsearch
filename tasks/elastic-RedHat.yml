@@ -18,8 +18,8 @@
 
 - name: "Copy config file"
   copy:
-    src: "../files/elasticsearch.yaml"
-    dest: "/etc/elasticsearch/elasticsearch.yaml"
+    src: "../files/elasticsearch.yml"
+    dest: "/etc/elasticsearch/elasticsearch.yml"
   become: yes
 
 - name: "Enable elasticsearch"
